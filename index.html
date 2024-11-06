@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Online casino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/hoverButtonAdaptation.css">
+    <link rel="stylesheet" href="css/casinoItemsAdaptation.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <!-- MAIN -->
+    <main class="container">
+        <!-- TABLE -->
+        <div class="mainInfoWrapper">
+            <div class="mainInfoHeadTextWrapper">
+                <div class="headTextWrapper">
+                    <p style="font: normal normal bold 28px/32px Roboto;">Online Casino Reviews</p>
+                    <button class="hoverButton" data-mobile="true" id="hoverButtonMobile">Hovers</button>
+                </div>
+                <div class="container mainInfoSecondHeadTextWrapper" style="justify-content: space-between;">
+                    <p style="font: normal normal bold 18px/24px Roboto;">All Casinos</p>
+                    <p style="font: normal normal normal 14px/20px Roboto;">1,138 Casinos</p>
+                </div>
+            </div>
+            <div class="casinosWrapper" id="casinosWrapper">
+            </div>
+            <div class="loadMoreWrapper">
+                <button class="loadMoreButton" id="loadMoreButton">Load More Casinos (+5)</button>
+            </div>
+        </div>
+        <!-- HOVER BUTTON -->
+        <section class="hoverButtonWrapper">
+            <button class="hoverButton" id="hoverButton">Hovers</button>
+        </section>
+    </main>
+    <script type="module" src="js/state.js" async></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/hoverButton.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script type="module" src="js/loadMoreButton.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+@media screen and (width < 1550px) {
+    .hoverButtonWrapper {
+        right: 10%;
+    }
+}
+
+@media screen and (width < 1190px) {
+    .hoverButtonWrapper {
+        display: none;
+    }
+    .hoverButton[data-mobile='true'] {
+        display: block;
+    }
+    .headTextWrapper{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (width < 650px) {
+    .mainInfoHeadTextWrapper>p {
+        max-width: 125px;
+    }
+
+    .hoverButtonWrapper {
+        left: 60%;
+    }
+}

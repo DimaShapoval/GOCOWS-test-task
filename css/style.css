@@ -1,0 +1,455 @@
+:root {
+    --header-bg: #0F0F0F 0% 0% no-repeat padding-box;
+    --page-bg: #F9FAFA 0% 0% no-repeat padding-box;
+    --main-header-text-color: #404040;
+    --hover-button-color: #616161 0% 0% no-repeat padding-box;
+    --casino-item-bg: #FFFFFF 0% 0% no-repeat padding-box;
+    --color-of-new: #68CB6C;
+    --border-color-of-new: 1px solid #0000001E;
+    --text-color-casino-item: #429BF4;
+    --rating-color: #8F8F8F;
+    --benefits-text-color: #5E6166;
+    --benefits-bg-color: #f3f3f3 0% 0% no-repeat padding-box;
+    --spins-active-color: #DAECFE 0% 0% no-repeat padding-box;
+    --visit-button-hover: #3082D4 0% 0% no-repeat padding-box;
+    --hover-button-active: #212121 0% 0% no-repeat padding-box;
+    ;
+    --welcome-border-color: #878ca4;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    background: var(--page-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 10px;
+    background: var(--header-bg);
+    box-shadow: 0px 2px 5px #00000029;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.mainInfoWrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 150px;
+}
+
+.mainInfoHeadTextWrapper {
+    color: var(--main-header-text-color);
+    letter-spacing: 0;
+}
+
+.mainInfoSecondHeadTextWrapper {
+    margin-top: 20px;
+}
+
+/* CASINO ITEMS */
+
+.casinoItem {
+    width: 100%;
+    justify-content: start;
+    padding: 10px 20px;
+    background: var(--casino-item-bg);
+    box-shadow: 0px 1px 6px #00000029;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.casinoItem[data-is-new='false'] .textOfNew {
+    display: none;
+}
+
+.casinoItem[data-is-new='false'] .textOfCasinoItem {
+    margin-top: 15px;
+}
+
+.casinoItem:first-child {
+    margin-top: 20px;
+}
+
+.casinoImageWrapper {
+    max-width: 70px;
+    margin-top: 13px;
+}
+
+.casinoImage {
+    width: 100%;
+}
+
+.casinoMainTextWrapper {
+    margin-left: 15px;
+    max-width: 233px;
+    height: 100%;
+    width: 100%;
+}
+
+.textOfNew {
+    font: normal normal bold 11px/18px Roboto;
+    color: var(--color-of-new);
+    letter-spacing: 0px;
+    border: var(--border-color-of-new);
+    width: min-content;
+    padding: 0 5px;
+    border-radius: 4px;
+    margin: 5px 0;
+
+}
+
+.textOfCasinoItem {
+    font: normal normal normal 15px/18px Roboto;
+    color: var(--text-color-casino-item);
+    height: auto;
+
+}
+
+.ratingWrapper {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.rating {
+    gap: 5.8px;
+    font: normal normal normal 12px/20px Roboto;
+    color: var(--rating-color);
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+/* BENEFITS WRAPPER */
+.benefitsWrapper {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    max-width: 239px;
+    width: 100%;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+
+#spins {
+    position: relative;
+}
+
+#spins:active {
+    background: var(--spins-active-color);
+}
+
+#spins.active {
+    background: var(--spins-active-color);
+}
+
+
+.benefit {
+    font: normal normal normal 13px/20px Roboto;
+    color: var(--benefits-text-color);
+    padding: 4px 20px;
+    background: var(--benefits-bg-color);
+    border-radius: 13px;
+    width: max-content;
+    border: none;
+}
+
+/* VISIT BUTTON */
+
+.visitButton {
+    background: var(--text-color-casino-item);
+    border-radius: 4px;
+    font: normal normal normal 11px/20px Roboto;
+    letter-spacing: 0.55px;
+    color: #FFFFFF;
+    border: none;
+    padding: 7px 20px;
+    max-height: 30px;
+    max-width: 68px;
+}
+
+#visitButton:active {
+    background: var(--visit-button-hover);
+}
+
+#visitButton.active {
+    background: var(--visit-button-hover);
+}
+
+
+
+/* HOVER BUTTON */
+
+.hoverButtonWrapper {
+    position: absolute;
+    right: 20%;
+    top: 152px;
+}
+
+.hoverButton[data-mobile='true'] {
+    display: none;
+}
+
+.hoverButton {
+    background: var(--hover-button-color);
+    font: normal normal bold 11px/20px Roboto;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 11px 25px;
+    max-width: 94px;
+    text-transform: uppercase;
+    height: 37px;
+    border: none;
+    letter-spacing: 0.55px;
+}
+
+.hoverButton.active {
+    background: var(--hover-button-active);
+}
+
+/* LOAD MORE BUTTON */
+.loadMoreWrapper {
+    margin: 15px 0;
+}
+
+.loadMoreButton {
+    font: normal normal normal 14px/18px Roboto;
+    padding: 14px 0;
+    width: 100%;
+    letter-spacing: 0px;
+    color: var(--text-color-casino-item);
+    border: 1px solid var(--text-color-casino-item);
+    border-radius: 23px;
+    background: var(--casino-item-bg);
+}
+
+.loadMoreButton.active {
+    background: #429BF4 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+
+}
+
+.loadMoreButton:active{
+    background: #429BF4 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+}
+
+.loadMoreButton.hide{
+    display: none;
+}
+
+/* MODAL */
+
+.modalWrapper {
+    position: absolute;
+    margin-top: 9px;
+    left: 50%;
+    transform: translateX(-31%);
+    width: 304px;
+    display: flex;
+    background: var(--casino-item-bg);
+    box-shadow: 0px 1px 6px #00000029;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.modalWrapper.hide {
+    display: none;
+}
+
+.triangle {
+    position: absolute;
+    top: -5px;
+    left: 152px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #FFFFFF;
+}
+
+.triangle-shadow {
+    position: absolute;
+    top: -7px;
+    left: 152px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #00000007;
+    z-index: 0;
+}
+
+.modalHeaderWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+    font: normal normal bold 14px/18px Roboto;
+    color: var(--main-header-text-color);
+}
+
+.closeModal {
+    position: relative;
+    top: -5px;
+    background: none;
+    border: none;
+}
+
+.welcomeButtonWrapper {
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.welcomeButton {
+    width: 85%;
+    position: relative;
+    border: none;
+    background: none;
+    color: var(--benefits-text-color);
+    padding: 10px;
+}
+
+.welcomeButton::before,
+.welcomeButton::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-color: var(--welcome-border-color);
+}
+
+.welcomeButton::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px dashed var(--welcome-border-color);
+}
+
+.welcomeButton::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px dashed var(--welcome-border-color);
+}
+
+.welcomeButton .left-border,
+.welcomeButton .right-border {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-color: var(--welcome-border-color);
+}
+
+.welcomeButton .left-border {
+    top: 10%;
+    bottom: 0;
+    left: -2px;
+    height: 80%;
+    border-left: 2px dashed var(--welcome-border-color);
+}
+
+.welcomeButton .right-border {
+    top: 10%;
+    bottom: 0;
+    right: -2px;
+    height: 80%;
+    border-right: 2px dashed var(--welcome-border-color);
+}
+
+.modalValuesWrapper {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+
+
+}
+
+.modalPropertyWrapper {
+    width: 85%;
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    font: normal normal normal 14px/16px Roboto;
+    color: #8F8F8F;
+    justify-content: space-between;
+}
+
+.modalValue {
+    color: #5E6166;
+}
+
+.modalValue[data-modal-value-free='true'] {
+    color: var(--color-of-new);
+}
+
+/* COPY MODAL */
+
+.copyWrapper {
+    position: absolute;
+    display: flex;
+    background: var(--casino-item-bg);
+    box-shadow: 0px 1px 6px #00000029;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 13px 30px;
+    top: -100%;
+    transform: translateY(-50%);
+
+}
+
+.copyTextWrapper {
+    display: flex;
+    font: normal normal normal 13px/22px Roboto;
+    letter-spacing: 0px;
+    gap: 6px;
+    color: #5E6166;
+}
+
+.copyWrapper .triangle{
+    bottom: -10px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 11px solid #FFFFFF;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: none;
+}
+
+.copyWrapper .triangle-shadow{
+    bottom: -11px;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+    border-top: 12px solid #00000007;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: none;
+}
+
+.copyWrapper.hide{
+    display: none;
+}
